@@ -3,7 +3,7 @@ const { getList,CreateList,UpdateList,DeleteFromList } = require('../db/methods'
 
 const rutas = express.Router();
 
-rutas.get('/a',getList);
+rutas.get('/',getList);
 
 rutas.post('/',CreateList);
 
