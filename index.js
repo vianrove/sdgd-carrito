@@ -9,7 +9,7 @@ config()
 
 const PORT = process.env.PORT || 8084;
 app.use(express.json())
-app.use(cors)
+app.use(cors())
 app.use(rutas);//manejador de rutass
 
 app.use((req,res)=>{
