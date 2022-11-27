@@ -23,7 +23,7 @@ const CreateList =(req, res)=>{
     order.save().then(
         (doc)=>{
             console.log(`Nueva orden con id: ${order.id} creado`,doc);
-            res.status(200).json({response:'success'})  
+            res.status(200).json({response:'success',doc})  
             if(req.body.bag.length>1){
                 for(let data in req.body.bag){
                     update(req.body.bag[data],(result)=>console.log(result))
