@@ -41,6 +41,18 @@ const CreateList =(req, res)=>{
     
 }
 
+const viewSpesific = (req, res)=>{
+    const { id, UserID } = req.params;
+    modelCart.find({_id:id, UserID:UserID},'UserID bag')
+    .then(doc =>{        
+        res.status(200).json(doc[0]) 
+        //correctiondb(doc[0]["bag"])
+    })
+    .catch(err=>{ 
+        res.status(200).json({message:'error'})   
+        console.log(err.message)})
+}
+
 const UpdateList =(req, res)=>{
     const { id } = req.params;
     modelCart.find({_id:id},'UserID bag').then(
@@ -91,4 +103,4 @@ const DeleteFromList =(req, res)=>{
 
 }
 
-module.exports = { getList, CreateList, UpdateList, DeleteFromList }
+module.exports = { getList, CreateList, UpdateList, DeleteFromList,viewSpesific }
