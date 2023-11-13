@@ -230,7 +230,7 @@ resource "azurerm_linux_web_app" "res-52" {
   }
   site_config {
     application_stack {
-      docker_image_name = "jhonpilot/gestiondocumental2:latest"
+      docker_image_name = "jhonpilot/gestiondocumental2:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -270,7 +270,7 @@ resource "azurerm_linux_web_app" "res-57" {
   }
   site_config {
     application_stack {
-      docker_image_name = "jhonpilot/gestiondocumental2:latest"
+      docker_image_name = "jhonpilot/gestiondocumental2:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -311,7 +311,7 @@ resource "azurerm_linux_web_app" "res-62" {
   }
   site_config {
     application_stack {
-      docker_image_name = "jhonpilot/nodelogin:latest"
+      docker_image_name = "jhonpilot/nodelogin:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -352,7 +352,7 @@ resource "azurerm_linux_web_app" "res-67" {
   }
   site_config {
     application_stack {
-      docker_image_name = "jhonpilot/nodelogin:latest"
+      docker_image_name = "jhonpilot/nodelogin:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -388,7 +388,7 @@ resource "azurerm_linux_web_app" "res-72" {
   }
   site_config {
     application_stack {
-      docker_image_name = "vianrove/api-pasarela:1.2"
+      docker_image_name = "vianrove/api-pasarela:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -428,7 +428,7 @@ resource "azurerm_linux_web_app" "res-77" {
   }
   site_config {
     application_stack {
-      docker_image_name = "vianrove/api-pasarela:1.2"
+      docker_image_name = "vianrove/api-pasarela:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -472,7 +472,7 @@ resource "azurerm_linux_web_app" "res-82" {
   }
   site_config {
     application_stack {
-      docker_image_name = "jhonpilot/servicecarrito:latest"
+      docker_image_name = "jhonpilot/servicecarrito:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
@@ -513,7 +513,7 @@ resource "azurerm_linux_web_app" "res-87" {
   }
   site_config {
     application_stack {
-      docker_image_name = "jhonpilot/servicecarrito:latest"
+      docker_image_name = "jhonpilot/servicecarrito:${var.imagebuild}"
       docker_registry_url = "https://index.docker.io"
     }
     always_on  = false
